@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <button id="toggleMode" aria-label="Toggle Dark/Light Mode">Light Mode</button>
+    <div class="container" role="main" aria-label="Todo application container">
+        <div class="header">
+            <h1>Todo App</h1>
+            <p>Keep it up!</p>
+            <div class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="task-counter" id="task-counter" aria-live="polite">0 / 0</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Write your task" aria-label="Task input" autocomplete="off" />
+            <button onclick="addTask()" aria-label="Add task">
+        <i class="fas fa-plus"></i>
+      </button>
+        </div>
+        <ul id="taskList" aria-live="polite" aria-label="List of tasks"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+
+</html>
